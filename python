@@ -1,0 +1,15 @@
+##Walrus 
+#normal code
+inputs = list()
+while True:
+    current = input()
+    if current == "quit":
+        break
+    inputs.append(current)
+print("Your inputs:", inputs)
+
+#with Walrus
+inputs = list()
+while (current := input()) != "quit":
+    inputs.append(current)
+print("Your inputs:", inputs)
