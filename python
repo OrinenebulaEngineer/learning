@@ -1,4 +1,4 @@
-##Walrus 
+##--------------------------------------Walrus 
 #normal code
 inputs = list()
 while True:
@@ -13,3 +13,16 @@ inputs = list()
 while (current := input()) != "quit":
     inputs.append(current)
 print("Your inputs:", inputs)
+
+
+#---------------------------------datetime
+from datetime import datetime
+def day_calculator(date):
+    date = datetime.strptime(date, '%Y-%m-%d')
+    sajjad_birth = datetime.strptime("1999-01-14", '%Y-%m-%d')
+    
+    m_date = date - sajjad_birth  
+    if date < sajjad_birth:
+        print("Not yet born")
+    else:
+        print(str(m_date.days))
