@@ -16,6 +16,25 @@ print("Your inputs:", inputs)
 
 
 #---------------------------------datetime
+
+from datetime import datetime
+
+dt = datetime(2023, 10, 26, 14, 30, 0, 500000)
+print(dt.year, dt.month, dt.day)                     # 2023 10 26
+print(dt.hour, dt.minute, dt.second, dt.microsecond) # 14 30 0 500000
+
+dt = datetime(2023, 10, 26, 8)
+print(dt.hour, dt.minute, dt.second, dt.microsecond) # 8 0 0 0
+
+print(type(dt))                                      # <class 'datetime.datetime'>
+
+dt = datetime(2023, 10, 26, 15, 45, 30, 123456)
+
+print(dt)           # 2023-10-26 15:45:30.123456
+print(dt.date())    # 2023-10-26
+print(dt.time())    # 15:45:30.123456
+
+
 from datetime import datetime
 def day_calculator(date):
     date = datetime.strptime(date, '%Y-%m-%d')
